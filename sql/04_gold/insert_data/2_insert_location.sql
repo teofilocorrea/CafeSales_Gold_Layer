@@ -10,7 +10,7 @@
 SELECT DISTINCT COALESCE(location, 'Unknown')
 FROM silver.sales;
 
--- ETL — cargar los productos únicos en la dimensión
+-- ETL — cargar las localizaciones únicas en la dimensión
 INSERT INTO gold.dim_location (location_name)
 SELECT DISTINCT COALESCE(location, 'Unknown')
 FROM silver.sales;
